@@ -1,4 +1,18 @@
-@mixin input-element {
+@import "./variables.scss";
+@mixin input-login-element {
     width: 345px;
     height: 50px;
   }
+  @mixin input-search-element {
+    height: 50px;
+    width: 296px;
+    border-radius: 4px;
+  }
+
+
+@mixin card-element {
+  padding: 32px;
+  box-shadow: 0px 4px 33px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  background: $background-white;
+}

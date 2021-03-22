@@ -1,0 +1,14 @@
+@import "../../variables.scss";
+
+.wrapper {
+  width: 100vw;
+  height: 100%;
+  background-color: $background;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  &_left {
+    margin-right: 24px;
+  }
+}

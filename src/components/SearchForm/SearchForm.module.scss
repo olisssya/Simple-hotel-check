@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.searchForm {
+  @include card-element;
+  margin-bottom: 24px;
+  form {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      margin: 7px 0px;
+    }
+    input {
+      font-size: 16px;
+      @include input-search-element;
+      border: 1px solid #c9cacc;
+      margin-bottom: 16px;
+      padding:0px 10px;
+    }
+
+  }
+}
+button {
+  background: $gradient;
+  @include input-search-element;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin: 16px 0 15px 0;
+  cursor: pointer;
+}

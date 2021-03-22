@@ -1,9 +1,11 @@
 import styles from './App.module.scss'
 import Main from '../../pages/Main/Main'
 import Home from "../../pages/Home/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route,Redirect } from "react-router-dom";
+import {  useSelector } from "react-redux";
 
 function App() {
+  const isAuth = useSelector((state) => state.auth.isAuth);
   return (
     <Router>
       <Switch>
@@ -11,7 +13,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/main">
-          <Main />
+        {isAuth ?  <Main />:<Redirect to="/" /> }  
         </Route>
       </Switch>
     </Router>

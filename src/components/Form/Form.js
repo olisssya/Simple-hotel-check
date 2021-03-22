@@ -1,8 +1,13 @@
 import styles from "./Form.module.scss";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { authSucsessAC } from "../../redux/actionCreators";
+import { useDispatch } from "react-redux";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 const Form = () => {
+  const dispatch = useDispatch();
+  let history = useHistory();
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -19,8 +24,9 @@ const Form = () => {
           "Пароль должен содержать минимум 8 символов (латинские буквы или цифры)"
         ),
     }),
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: () => {
+      dispatch(authSucsessAC());
+      history.push("/main")
     },
   });
   return (
@@ -29,7 +35,7 @@ const Form = () => {
         <h1>Simple Hotel Check</h1>
         <label htmlFor="email">Логин</label>
         <input
-          className={formik.errors.email?styles.errorInput:null}
+          className={formik.errors.email ? styles.errorInput : null}
           id="email"
           name="email"
           type="email"
@@ -43,7 +49,7 @@ const Form = () => {
 
         <label htmlFor="password">Пароль</label>
         <input
-        className={formik.errors.password?styles.errorInput:null}
+          className={formik.errors.password ? styles.errorInput : null}
           id="password"
           name="password"
           type="password"
@@ -55,7 +61,9 @@ const Form = () => {
           <div className={styles.error}>{formik.errors.password}</div>
         ) : null}
 
-        <button type="submit">Войти</button>
+        <button type="submit">
+          Войти
+        </button>
       </form>
     </div>
   );

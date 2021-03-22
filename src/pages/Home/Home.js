@@ -3,10 +3,10 @@ import styles from './Home.module.scss'
 
 function Home(props) {
     return (
-        <main className = {styles.home}>
+        <div className = {styles.home}>
             <div className={styles.background}></div>
             <Form/>
-        </main>
+        </div>
     );
 }
 

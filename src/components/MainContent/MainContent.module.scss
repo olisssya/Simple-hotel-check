@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+@import "../../mixins.scss";
+
+.main {
+  @include card-element;
+  width: 664px;
+  height: 902px;
+}
+.hotel {
+  display: flex;
+  &_center {
+    display: flex;
+    flex-direction: column;
+    svg {
+      height: 17px !important;
+      width: 17px !important;
+  
+    }
+  }
+}
