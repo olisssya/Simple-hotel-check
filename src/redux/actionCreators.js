@@ -6,7 +6,9 @@ import {
   ERROR,
   SEARCH_FETCH,
   SEARCH_HOTELS,
-  ADD_FAVORITES
+  ADD_FAVORITES,
+  SORT_RATING,
+  SORT_PRICE
 } from "./actionTypes";
 
 export const authSucsessAC = () => ({ type: AUTH_SUCSESSFULLY });
@@ -18,3 +20,6 @@ export const initFetchAC = () => ({ type: INIT_FETCH });
 export const searchFetchAC = (data) => ({ type: SEARCH_FETCH, payload: data });
 export const errorAC = () => ({ type: ERROR });
 export const addFavoritesAC = (data) => ({ type: ADD_FAVORITES, payload:data });
+export const ratingSortAC = () => ({ type: SORT_RATING });
+export const priceSortAC = () => ({ type: SORT_PRICE });
+

@@ -14,7 +14,7 @@ dispatch(addFavoritesAC(e.target.id))
 
     return (
    
-              <div key={props.hotelId}  className={styles.hotel}>
+              <div  className={styles.hotel}>
                 <div className={styles.hotel_left}>
                   <svg
                     width="35"

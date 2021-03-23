@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { initFetchAC } from "../../redux/actionCreators";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styles from "./Main.module.scss";
 import Header from "../../components/Header/Header";
 import SearchForm from '../../components/SearchForm/SearchForm'

@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { authSucsessAC } from "../../redux/actionCreators";
 import { useDispatch } from "react-redux";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 
 const Form = () => {
   const dispatch = useDispatch();

@@ -24,12 +24,17 @@ function MainContent() {
             <path
               d="M0.999878 1.33334L9.66654 10L0.999878 18.6667"
               stroke="#A7A7A7"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
-          <span> {lastSearchInfo&&lastSearchInfo[0].location ? lastSearchInfo[0].location : "Москва"}</span>
+          <span>
+            {" "}
+            {lastSearchInfo && lastSearchInfo[0].location
+              ? lastSearchInfo[0].location
+              : "Москва"}
+          </span>
         </div>
         <div className={styles.main_title_date}>
           <div>
@@ -43,10 +48,10 @@ function MainContent() {
         <Carousel />
       </div>
       <div className={styles.main_favorites}>
-        <span>Добавлено в Избранное:</span> <strong>{favorites?favorites.length : 0}</strong>{" "}
-        <span>отелей</span>
+        <span>Добавлено в Избранное:</span>{" "}
+        <strong>{favorites ? favorites.length : 0}</strong> <span>отелей</span>
       </div>
-      {hotels && hotels.map((el) => <Hotels props={el} />)}
+      {hotels && hotels.map((el) => <Hotels key={el.hotelId} props={el} />)}
     </main>
   );
 }

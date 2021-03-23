@@ -4,5 +4,23 @@
 .favorites {
   @include card-element;
   width: 360px;
-  
+  h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  button {
+    max-width: 89px;
+    max-height: 28px;
+    background: none;
+    border: 1px solid #41522e;
+    border-radius: 4px;
+    margin-right: 8px;
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.408px;
+      font-weight: 300;
+    }
+  }
 }
