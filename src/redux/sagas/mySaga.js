@@ -24,7 +24,7 @@ const searchFetch = async (payload) => {
       payload.location
     }&currency=rub&checkIn=${moment(payload.startDate).format(
       "YYYY-MM-DD"
-    )}&checkOut=${moment(payload.endDate).format("YYYY-MM-DD")}&limit=10`
+    )}&checkOut=${moment(payload.startDate).add('days', payload.endDate).format("YYYY-MM-DD")}&limit=10`
   );
   try {
     const data = await result.json();

@@ -1,0 +1,46 @@
+.hotel {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-content: center;
+    border-bottom: 1px solid rgba(65, 82, 46, 0.15);
+    &_left {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 39px;
+      }
+      &_info {
+        span {
+          font-weight: 300;
+          font-size: 17px;
+          line-height: 22px;
+          letter-spacing: -0.408px;
+          margin-bottom: 5px;
+        }
+        svg {
+          height: 17px !important;
+          width: 17px !important;
+          margin: 0;
+        }
+        &_date {
+          span {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.408px;
+            color: #878787;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    &_right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      svg {
+        cursor: pointer;
+        margin-bottom: 22px;
+      }
+    }
+  }
