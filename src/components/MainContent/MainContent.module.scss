@@ -4,17 +4,92 @@
 .main {
   @include card-element;
   width: 664px;
-  height: 902px;
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    &_location {
+      span {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 37px;
+        margin-right: 20px;
+      }
+      svg{
+        margin-right: 20px;
+      }
+    }
+    &_date {
+      font-size: 24px;
+      line-height: 28px;
+      text-align: right;
+      color: #41522e;
+    }
+  }
+  &_carousel {
+    cursor: pointer;
+    margin-bottom: 28px;
+  }
+  &_favorites {
+    margin-bottom: 12px;
+    span {
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+    }
+    strong {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 22px;
+      letter-spacing: -0.408px;
+    }
+  }
 }
 .hotel {
   display: flex;
-  &_center {
+  justify-content: space-between;
+  padding: 16px 0;
+  align-content: center;
+  border-bottom: 1px solid rgba(65, 82, 46, 0.15);
+  &_left {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 39px;
+    }
+    &_info {
+      span {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: -0.408px;
+        margin-bottom: 5px;
+      }
+      svg {
+        height: 17px !important;
+        width: 17px !important;
+        margin: 0;
+      }
+      &_date {
+        span {
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: -0.408px;
+          color: #878787;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  &_right {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     svg {
-      height: 17px !important;
-      width: 17px !important;
-  
+      cursor: pointer;
+      margin-bottom: 22px;
     }
   }
 }

@@ -1,4 +1,4 @@
-import { INIT_HOTELS } from "../actionTypes";
+import { INIT_HOTELS, SEARCH_HOTELS } from "../actionTypes";
 
 const windowState = JSON.parse(window.localStorage.getItem("state"));
 
@@ -10,16 +10,23 @@ if (windowState) {
 } else {
   preloadedState = {
     hotels: [],
+    lastSearchInfo:[]
   };
 }
 
 export const mainReducer = (state = preloadedState, action) => {
   switch (action.type) {
     case INIT_HOTELS:
-      console.log(action.payload);
       return {
         ...state,
         hotels: action.payload,
+      };
+    case SEARCH_HOTELS:
+      console.log(action.payload);
+      return {
+        ...state,
+        hotels: action.payload.data,
+        lastSearchInfo:[{startDate:action.payload.startDate,endDate:action.payload.endDate,location:action.payload.location }]
       };
 
     default:
