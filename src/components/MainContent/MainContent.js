@@ -7,6 +7,8 @@ import Hotels from "../Hotels/Hotels";
 function MainContent() {
   const lastSearchInfo = useSelector((state) => state.main.lastSearchInfo);
   const hotels = useSelector((state) => state.main.hotels);
+  const favorites = useSelector((state) => state.main.favorites);
+
   return (
     <main className={styles.main}>
       <div className={styles.main_title}>
@@ -41,8 +43,8 @@ function MainContent() {
         <Carousel />
       </div>
       <div className={styles.main_favorites}>
-        <span>Добавлено в Избранное:</span> <strong>3</strong>{" "}
-        <span>отеля</span>
+        <span>Добавлено в Избранное:</span> <strong>{favorites?favorites.length : 0}</strong>{" "}
+        <span>отелей</span>
       </div>
       {hotels && hotels.map((el) => <Hotels props={el} />)}
     </main>

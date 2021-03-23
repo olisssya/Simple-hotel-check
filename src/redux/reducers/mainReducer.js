@@ -10,7 +10,6 @@ if (windowState) {
 } else {
   preloadedState = {
     hotels: [],
-    lastSearchInfo:[],
     favorites:[]
   };
 }
