@@ -36,7 +36,7 @@ function SearchForm() {
           selected={startDate}
           onChange={(date) => setStartDate(date)}
         />
-        <label htmlFor="end">Дата отъезда</label>
+        <label htmlFor="end">Количество ночей</label>
         <input
           required
           id="end"
